@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zoo Job Application Form</h1>
+    <p><em>Please fill out the form. Required fields are marked*</em></p>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+    <fieldset>
+        <legend>Contact iformation</legend><br>
+        <label>Your name* <input type="text"></label><br><br>
+        <label>Your  phone number* </label><input type="number"></label><br><br>
+        <label>Your email* </label><input type="email"></label><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Personaliti iformation</legend><br>
+        <label>Your old* <input type="number"></label><br><br>
+        <label>Your gender <select name="Your_gender"> 
+            <option value="Man">Man</option>
+            <option value="Woman">Woman</option>
+        </select></label><br><br>
+        <label>Your personal quality </label><textarea name="quality" cols="30" rows="15"></textarea><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Choose your any animals</legend><br>
+        <label><input type="checkbox" name="Dog">Dog </label>
+        <label><input type="checkbox" name="Cat">Cat </label>
+        <label><input type="checkbox" name="Snake">Snake </label>
+        <label><input type="checkbox" name="Bunny">Bunny </label><br>
+        <label><input type="checkbox" name="Rat">Rat </label>
+        <label><input type="checkbox" name="Cow">Cow </label>
+        <label><input type="checkbox" name="Bird">Bird </label>
+        <label><input type="checkbox" name="Ship">Ship </label><br><br>
+    </form>
+    <input type="submit">
+</body>
+</html>
