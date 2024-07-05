@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="http://fe.it-academy.by/TestForm.php" method="post">
+    <table align="center" width="700">
+        <tr>
+            <td>
+                <h3>Простая форма поиска с вариантами:</h3>
+                    <fieldset>
+                        <legend>Строка поиска</legend>
+                        <p><input type="search" name="search" placeholder="Поиск по сайту" maxlength="10"><input type="submit" value="Искать"></p>
+                        <label><input type="radio" name="radio" value="на сайте">на сайте</label>
+                        <label><input type="radio" name="radio" value="в google">в google</label>
+                    </fieldset>
+            </td>
+            <td>
+                <h3>Простая форма поиска с вариантами:</h3>
+                    <fieldset>
+                        <legend>Строка поиска</legend>
+                        <p><input type="search" name="search" required placeholder="Поиск по сайту" autofocus> * <input type="submit" value="Искать"></p>
+                        <label><input type="radio" name="radio2" value="на сайте">на сайте</label>
+                        <label><input type="radio" name="radio2" value="в google">в google</label>
+                    </fieldset>                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Простая форма авторизации:</h3>
+                    <fieldset>
+                        <legend>Авторизируйтесь</legend>
+                        <p><input type="text" name="username" required placeholder="username"> * Логин</p>
+                        <p><input type="password" name="pass" required placeholder="pass"> * Пароль</p>
+                        <label><input type="checkbox" name="memory">Оставаться в системе</label>
+                        <p><label><input type="submit" value="Войти"></label></p>
+                    </fieldset>
+            </td>
+            <td>
+                <h3>Опрос(голосование):</h3>
+                    <fieldset>
+                        <legend>Как вам?</legend>
+                        <label><input type="radio" name="radio23">ничего <input type="hidden" name="date_voite" value="2013.12.31"></label> <br>
+                        <label><input type="radio" name="radio23">неплохо <input type="hidden" name="date_voite" value="2013.12.31"></label></label><br>
+                        <label><input type="radio" name="radio23">хорошо <input type="hidden" name="date_voite" value="2013.12.31"></label></label><br>
+                        <label><input type="radio" name="radio23">супер <input type="hidden" name="date_voite" value="2013.12.31"></label></label><br>
+                        <p><label><input type="submit" value="Отправить"></label></p>
+                    </fieldset>                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Отзыв:</h3>
+                    <fieldset >
+                    <form method="post">
+                        <legend>Оставьте Ваш отзыв</legend>
+                        <p><input type="text" name="name" required placeholder="name"> * Имя</p>
+                        <p><input type="email" name="e-mail" required placeholder="e-mail"> * e-mail</p>
+                        <textarea name="quality" cols="20" rows="3">Форма отправки</textarea> 
+                        <p><label><input type="submit" value="Отправить"></label></p>
+                    </form>
+                    </fieldset>
+            </td>
+            <td>
+                <h3>Выпадающий и мульти списки:</h3>
+                    <fieldset>
+                        <legend>Города РБ</legend>
+                        <p><select name="sity">
+                            <optgroup label="Города РБ">
+                                <option value="Витебск">Витебск</option>
+                                <option value="Новополоцк">Новополоцк</option>
+                                <option value="Могилёв">Могилёв</option>
+                            </optgroup>
+                            <optgroup label="Города РФ">
+                                <option value="М">Москва</option>
+                                <option value="СП">Санкт-Питербург</option>
+                                <option value="С">Самара</option>
+                            </optgroup>
+                        </select>
+                        <select name="sity" multiple>
+                            <optgroup label="Города РБ">
+                                <option value="Витебск">Витебск</option>
+                                <option value="Новополоцк">Новополоцк</option>
+                                <option value="Могилёв">Могилёв</option>
+                            </optgroup>
+                            <optgroup label="Города РФ">
+                                <option value="М">Москва</option>
+                                <option value="СП">Санкт-Питербург</option>
+                                <option value="С">Самара</option>
+                            </optgroup>
+                        </select></p>
+                        <p><label><input type="submit" value="ОК"></label></p>
+                    </fieldset>                
+            </td>
+            <td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Загрузка файла на сервер:</h3>
+                    <fieldset>
+                        <legend>Upload</legend>
+                        <form enctype="multipart/form-data" method="post">
+                        <p>Файл:</p>
+                        <p><input type="file" name="file" multiple accept="image/*,image/jpeg" method="post"></p></form>
+                        <p>Срок хранения (года):</p>
+                        <form enctype="multipart/form-data">
+                        <p><input type="date" name="year" >
+                        <input type="file" name="f2" multiple accept="image/*,image/jpeg" method="post"></p>
+                        <p><input type="submit" name="Загрузить"></p></form>
+                    </fieldset>                
+            </td>
+            <td>
+                <h3>Валидация данных HTML5:</h3>
+                    <fieldset >
+                        <legend>Строка поиска</legend>
+                        <p><input type="text" name="only" pattern="^[А-Яа-яЁё\s]+$" required placeholder="Только русские буквы"></p>
+                        <p>Введите телефонный номер в формате +ХХХ-ХХ-ХХХХХХХ </p>
+                        <p><input name="tel" id="[/B]phone[B]" pattern="+[0-9]{3}-[0-9]{2}-[0-9]{7}"></p> 
+                        <p><label><input type="submit" value="Отправить"></label></p>
+                    </fieldset>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+<time datetime="2025"></time>
